@@ -19,7 +19,7 @@ class GameConfig:
     Holds configuration constants for the game settings, including levels, guesses, and limits.
     """
     MIN_GUESSES = 3
-    MAX_GUESSES = 99
+    MAX_GUESSES = 9
     MIN_LENGTH = 3
     MAX_LENGTH = 9
     MIN_LIMIT = 3
@@ -113,7 +113,7 @@ def main() -> None:
             if prog_round:
                 print(f"You cracked {prog_round} {'code' if prog_round == 1 else 'codes'}")
 
-            continue_playing = input("\nWould you like to play again? ").lower() in GameResponse.YES
+            continue_playing = input("\nWould you like to play again? Y/N ").lower() in GameResponse.YES
 
             clear_screen()
 
